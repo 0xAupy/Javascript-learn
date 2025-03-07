@@ -8,7 +8,7 @@ console.log(newArr); //1,2,3,4,5
 console.log(typeof newArr); //string
 
 //slice
-console.log("Before slice: ", arr); //[1, 2, 3, 4, 5]
+console.log("\n\nBefore slice: ", arr); //[1, 2, 3, 4, 5]
 const arr1 = arr.slice(1, 3);
 console.log("new array: ", arr1); //[2, 3]
 console.log("After slice: ", arr); //[1, 2, 3, 4, 5]
