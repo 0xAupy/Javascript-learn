@@ -15,3 +15,9 @@ let firstName = null; //it means that the value of the variable is empty
 console.log(typeof name);
 console.log(typeof null); //it will show object but it is a bug in js
 console.log(typeof undefined); //undefined is a type in js
+
+//falsy values
+//false, 0, '', null, undefined, NaN
+
+//truthy values
+//true, 1, 'false', "0", {}, [], function(){}
