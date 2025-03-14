@@ -21,6 +21,5 @@ console.table({
   accountId,
   accountEmail,
   accountPassword,
-  accountCity,
-  accountName,
+  accountCity
 }); //console.table() is used to display data in tabular form

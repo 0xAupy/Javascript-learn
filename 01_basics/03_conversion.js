@@ -17,10 +17,16 @@ let val3 = undefined;
 let val3InNumber = Number(val3);
 console.log(val3InNumber); //NaN
 
-let val4 = 1;
+let val4 = 1; //having any value means it is true wether it be a minus value
 let val4InBoolean = Boolean(val4);
 console.log(val4InBoolean); //true
 
 let val5 = "";
 let val5InBoolean = Boolean(val5);
 console.log(val5InBoolean); //false
+
+let val6 = 2002
+let val6InStr = String(val6)
+console.log(val6InStr); //2002 
+console.log(typeof val6InStr); //type is now string
+
