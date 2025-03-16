@@ -15,10 +15,18 @@
 
 <body>
     <div class="bg-black">
-        <h1 id="title" class="heading">DOM Learning from youtube</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, officiis eius distinctio ut, quam eos vitae
-            porro dolores deleniti a consequatur. Ipsam rem reprehenderit fugiat reiciendis sapiente voluptate sed
-            temporibus?</p>
+        <h1 id="title" class="heading">DOM Learning from youtube <span style="display: none">test text</span></h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <!-- querySelector always returns the first one -->
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+        <!-- querySelectorAll doesnt return an array it returns a node list-item -->
+        <!-- since this is not an array we cant use map here, so we have to use forEach -->
     </div>
 
 </body>
