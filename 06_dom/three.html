@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUPY</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+</body>
+
+<script>
+    const div = document.createElement('div')
+    console.log(div)
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "aupy")
+    div.style.backgroundColor = "green"
+    div.style.padding = "10px"
+    //till now this is in the memory, to display it we need to attach it
+    //div.innerText = "BRO im cooked" //this is  not preffered becaute it overwrites existing value
+
+    //do this instead
+    const text = document.createTextNode("BRo im so cooked")
+    div.append(text)
+
+    //finally attach it!
+    document.body.appendChild(div)
+</script>
+
+</html>

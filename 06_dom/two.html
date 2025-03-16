@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+    <!-- this creates a whole tree, here every new line, enter etc all are considered as node -->
+     <!-- this is because web is a dumbass who makes things complicated for no reason just like me -->
+    <div class="parent">
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent)
+    console.log(parent.children) //this is a html collection, this is array like
+    console.log(parent.children[1].innerHTML) //Monday
+
+    //lets run a for loop on this
+    //for (let i = 0; i < parent.children.length; i++) {
+    //   console.log(parent.children[i].innerHTML)
+    //} //this will print all the days
+
+    parent.children[1].style.color = "orange" //Monday is now orange
+    console.log(parent.firstElementChild) //<div class="day">Sunday</div>
+    console.log(parent.lastElementChild) //<div class="day">Wednesday</div>
+
+    const dayOne = document.querySelector('.day')
+    //console.log(dayOne) //<div class="day">Sunday</div>
+    //to go to the parent
+    //console.log(dayOne.parentElement)
+    //console.log(dayOne.nextElementSibling) // <div class="day">Monday</div>
+
+    console.log("Nodes: ", parent.childNodes)
+/*
+Nodes:  NodeList(9) 
+[text, div.day, text, div.day, text, div.day, text, div.day, text]
+0: text
+1: div.day
+2: text
+3: div.day
+4: text
+5: div.day
+6: text
+7: div.day
+8: text
+length: 9
+[[Prototype]]: NodeList
+*/
+
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUPY</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+</body>
+<script>
+    const addLanguage = (name) => {
+        const li = document.createElement('li') //creating li element
+        li.innerHTML = `${name}` //putting text under it, but this is not optimized because evrytime this function is called the DOM tree will be traversed which is not good for complex or lengthy tree structures
+        document.querySelector('.language').append(li)
+    }
+    addLanguage("python")
+    addLanguage("c++")
+
+    //more optimized way
+    const addOptLanguage = (name) => {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(name)) //we are creating a text node and then adding it to the li elemnt as its child
+        document.querySelector('.language').append(li)
+    }
+    addOptLanguage("Java")
+
+    //edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "Rust"
+    const newli = document.createElement('li')
+    newli.textContent = "Rust"
+    secondLang.replaceWith(newli)
+
+    //another way to edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>' //meh
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+
+</html>
