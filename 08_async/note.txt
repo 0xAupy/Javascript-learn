@@ -1,0 +1,9 @@
+**javascript is synchronous**
+which means code will execute line by line
+
+**single threaded language**
+
+**blocking VS non-blocking
+blocking code -> blocks the flow of the whole program
+
+non-blocking -> doesn't block
